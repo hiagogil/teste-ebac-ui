@@ -29,9 +29,8 @@ describe('Funcionalidade pagina de produtos', () => {
         cy.get('.input-text').click().clear().type(quantidade)
         cy.get('.single_add_to_cart_button').click()
 
-        
-        cy.get('.woocommerce-message').should('contain', '“Abominable Hoodie” foram adicionados no seu carrinho.')
-        cy.get('.container > .topbar-inner').should('contain', '3')
+        cy.get('.woocommerce-message').should('contain', quantidade)
+        cy . get ( '.woocommerce-message' ). should ( 'contain' , quantidade  +  ' × “Abominable Hoodie” foram adicionados no seu carrinho.' )
 
     });
 
