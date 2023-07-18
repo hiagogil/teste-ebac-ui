@@ -1,4 +1,4 @@
-/// <reference types="cypres" />
+/// <reference types="cypress" />
 const perfil = require('../fixtures/perfil.json')
 context('Funcionalidade fazer login', () => {
 

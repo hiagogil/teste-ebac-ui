@@ -1,4 +1,4 @@
-/// <reference types="cypres" />
+/// <reference types="cypress" />
 const  { faker }  =  require ( '@faker-js/faker' ) ;
 
 describe('Funcionalidade pre cadastro', () => {
@@ -9,7 +9,7 @@ describe('Funcionalidade pre cadastro', () => {
 
     });
 
-it.only('Deve completar o pré-cadastro com sucesso', () =>{
+it('Deve completar o pré-cadastro com sucesso', () =>{
     
     let emailfaker = faker.internet.email()
     let nomeFaker = faker.name.firstName( )
@@ -25,6 +25,11 @@ it.only('Deve completar o pré-cadastro com sucesso', () =>{
     cy.get('#account_first_name').type(nomeFaker)
     cy.get('#account_last_name').type(lastFaker)
 
+});
+
+it.only('Deve completar o pre cadastro com sucesso usando comandos customizados', () => {
+    let emailfaker2 = faker.internet.email()
+    cy.preCadastro(emailfaker2, 'senha!@#forte', 'Hiago', 'Gil')
 });
 
 

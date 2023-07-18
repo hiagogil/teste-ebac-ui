@@ -14,4 +14,6 @@ module.exports = defineConfig({
 
  },
 
+ "scrollBehavior": "center"
+
 });
